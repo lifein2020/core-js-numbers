@@ -49,8 +49,12 @@ function getCircleCircumference(radius) {
  *  10, 0  => 5
  *  -3, 3  => 0
  */
-function getAverage(/* value1, value2 */) {
-  throw new Error('Not implemented');
+function getAverage(value1, value2) {
+  if (Number.isNaN(value1) || Number.isNaN(value2)) {
+    return 'Wrong number(s)';
+  }
+  const result = (value1 + value2) / 2;
+  return Number.isFinite(result) ? result : Number.MAX_VALUE;
 }
 
 /**
